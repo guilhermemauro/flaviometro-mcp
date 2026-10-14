@@ -1,0 +1,40 @@
+{
+  "name": "flaviometro-mcp",
+  "version": "0.1.0",
+  "description": "Servidor MCP local e não oficial para consultar os dados públicos do Flaviômetro (flaviometro.com).",
+  "type": "module",
+  "bin": {
+    "flaviometro-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "flaviometro",
+    "eleicoes",
+    "dados-abertos"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "fflate": "^0.8.3",
+    "undici": "^7.30.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
